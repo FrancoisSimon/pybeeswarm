@@ -1,18 +1,12 @@
 pybeeswarm
 ==========
 
-Beeswarm plots for python. Inspired by [R beeswarm plots](http://www.cbs.dtu.dk/~eklund/beeswarm/)
-
-## Install ##
-The easiest way to install pybeeswarm is using pip:
-
-```
-sudo pip install pybeeswarm
-```
+Beeswarm plots for python. Inspired by [R beeswarm plots](http://www.cbs.dtu.dk/~eklund/beeswarm/).
+Fork from https://github.com/mgymrek/pybeeswarm that aims to update the function
 
 To install the latest version on github, simply do:
 ```
-git clone https://github.com/mgymrek/pybeeswarm.git
+git clone https://github.com/FrancoisSimon/pybeeswarm.git
 cd pybeeswarm
 sudo python setup.py install
 ```
@@ -33,7 +27,7 @@ There is only one function, ```beeswarm```:
 
 
 ```
-from beeswarm import *
+from beeswarm import beeswarm
 help(beeswarm)
 
 Help on function beeswarm in module beeswarm.beeswarm:
@@ -54,7 +48,7 @@ beeswarm(values, positions=None, method='swarm', ax=None, s=20, col='black', xli
             Default: swarm
          * ax: use this axis for plotting. If none supplied, make a new one
             Default: None
-         * s: size of points in points^2 (assuming 72 points/inch).
+         * space: parameter that directs the spacing between points. (used to be called s in mgymrek/pybeeswarm)
             Defautt: 20
          * col: color of points. Can be:
             - a single string: color all points that color
@@ -84,7 +78,7 @@ import numpy as np
 d1 = np.random.uniform(low=-3, high=3, size=100)
 d2 = np.random.normal(size=100)
 
-bs, ax = beeswarm([d1,d2], method="swarm", labels=["sample 1", "sample 2"], col=["blue","red"])
+bs, ax = beeswarm([d1,d2], method="swarm", labels=["sample 1", "sample 2"], col=["blue","red"], space = 20, s = 15)
 ```
 
 More details [here](http://melissagymrek.com/python/2014/01/04/python-beeswarm.html). View more examples [here](http://nbviewer.ipython.org/github/mgymrek/pybeeswarm/blob/master/tests.ipynb?create=1).
