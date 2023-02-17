@@ -6,7 +6,7 @@ Fork from https://github.com/mgymrek/pybeeswarm that aims to update the function
 
 At the moment, I only updated the `swarm` method and repaced the name of the argument `s` by `space` so the size of the points can be modified independently. 
 
-To install the latest version on github, simply do:
+To install this version on github, simply do:
 ```
 git clone https://github.com/FrancoisSimon/pybeeswarm.git
 cd pybeeswarm
